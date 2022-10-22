@@ -179,14 +179,14 @@ EOF
 # Requires:
 #  * iTerm
 
-_lux_default LUX_ITERM_LIGHT 'Solarized Light'
-_lux_default LUX_ITERM_DARK  'Solarized Dark'
+# _lux_default LUX_ITERM_LIGHT 'Solarized Light'
+# _lux_default LUX_ITERM_DARK  'Solarized Dark'
 
-function _lux_set_iterm() {
-    if ! _lux_macos_app_found 'iTerm'; then return 1; fi
-    osascript -l JavaScript -e \
-        "Application('iTerm').currentWindow().currentSession().colorPreset = '$1'"
-}
+# function _lux_set_iterm() {
+#     if ! _lux_macos_app_found 'iTerm'; then return 1; fi
+#     osascript -l JavaScript -e \
+#         "Application('iTerm').currentWindow().currentSession().colorPreset = '$1'"
+# }
 
 #-----------------------------------------
 # Element: 'iterm_all'
@@ -198,10 +198,10 @@ function _lux_set_iterm() {
 # Requires:
 #  * iTerm
 
-_lux_default LUX_ITERM_ALL_LIGHT 'Solarized Light'
-_lux_default LUX_ITERM_ALL_DARK  'Solarized Dark'
+_lux_default LUX_ITERM_LIGHT 'Tango Light'
+_lux_default LUX_ITERM_DARK  'Tango Dark'
 
-function _lux_set_iterm_all() {
+function _lux_set_iterm() {
     if ! _lux_macos_app_found 'iTerm'; then return 1; fi
     osascript -l JavaScript <<- EOF
         windows = Application('iTerm').windows()
